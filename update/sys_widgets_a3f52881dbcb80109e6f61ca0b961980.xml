@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_widgets">
+    <sys_widgets action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>Test for dashboard</name>
+        <order>100</order>
+        <renderer/>
+        <renderer_type>javascript</renderer_type>
+        <roles/>
+        <script><![CDATA[function sections() {
+    return {
+        'widget_name': { 'uiPageName' : 'UI_page_name'},
+        'widget_name2': {'uiPageName': 'UI_page_name'}
+    };
+}
+
+function render() {
+    var uiPageName = renderer.getPreferences().get("uiPageName");
+    return renderer.getRenderedPage(uiPageName);
+}
+
+function getEditLink() {
+    return "sys_ui_page.do?sysparm_query=name=" + renderer.getPreferences().get("uiPageName");
+}]]></script>
+        <sys_class_name>sys_widgets</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-02-16 19:27:56</sys_created_on>
+        <sys_id>a3f52881dbcb80109e6f61ca0b961980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test for dashboard</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_widgets_a3f52881dbcb80109e6f61ca0b961980</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-02-16 19:27:56</sys_updated_on>
+        <top_level_category>false</top_level_category>
+    </sys_widgets>
+</record_update>
